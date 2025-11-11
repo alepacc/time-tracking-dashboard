@@ -8,37 +8,48 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <section class="container">
+    <main class="grid">
+      <div class="report card sidebar">
+        <div class="header">
+          <img src="images/image-jeremy.png" alt="avatar image" class="avatar-img">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      <div class="switch-time">
+        <span class="daily">Daily</span>
+        <span class="weekly selected">Weekly</span>
+        <span class="monthly">Monthly</span>
+      </div>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
+     
+      </div>
+      <div class="card work">
+        <span> 
+          <h3 class="name">Work</h3>
+          <img src="images/icon-ellipsis.svg" alt="ellipsis">
+        </span>
   5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
+  Previous - 7hrs daily
   32hrs <!-- weekly -->
   Previous - 36hrs <!-- weekly -->
   103hrs <!-- monthly -->
   Previous - 128hrs <!-- monthly -->
 
-  Play
+      </div>
+      <div class="card play">
+          Play
   1hr <!-- daily -->
   Previous - 2hrs <!-- daily -->
   10hrs <!-- weekly -->
   Previous - 8hrs <!-- weekly -->
   23hrs <!-- monthly -->
   Previous - 29hrs <!-- monthly -->
-
+      </div>
+      <div class="card study">
   Study
   0hrs <!-- daily -->
   Previous - 1hr <!-- daily -->
@@ -46,7 +57,8 @@
   Previous - 7hrs <!-- weekly -->
   13hrs <!-- monthly -->
   Previous - 19hrs <!-- monthly -->
-
+      </div>
+      <div class="card excercise">
   Exercise
   1hr <!-- daily -->
   Previous - 1hr <!-- daily -->
@@ -54,7 +66,8 @@
   Previous - 5hrs <!-- weekly -->
   11hrs <!-- monthly -->
   Previous - 18hrs <!-- monthly -->
-
+      </div>
+      <div class="card social">
   Social
   1hr <!-- daily -->
   Previous - 3hrs <!-- daily -->
@@ -62,7 +75,8 @@
   Previous - 10hrs <!-- weekly -->
   21hrs <!-- monthly -->
   Previous - 23hrs <!-- monthly -->
-
+      </div>
+      <div class="card selfcare">
   Self Care
   0hrs <!-- daily -->
   Previous - 1hr <!-- daily -->
@@ -70,11 +84,10 @@
   Previous - 2hrs <!-- weekly -->
   7hrs <!-- monthly -->
   Previous - 11hrs <!-- monthly -->
-
+      </div>
+      
+    </main>
+  </section>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

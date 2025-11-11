@@ -1,0 +1,105 @@
+// Colors
+// Primary
+$purple-600: hsl(246, 80%, 60%);
+$orange-300: hsl(15, 100%, 70%); // work
+$blue-300: hsl(195, 74%, 62%); // play
+$pink-400: hsl(348, 100%, 68%); // study
+$green-400: hsl(145, 58%, 55%); // exercise
+$purple-700: hsl(264, 64%, 52%); // social
+$yellow-300: hsl(43, 84%, 65%); // self care
+
+// Neutral
+$navy-950: hsl(226, 43%, 10%);
+$navy-900: hsl(235, 46%, 20%);
+$purple-500: hsl(235, 45%, 61%);
+$navy-200: hsl(236, 100%, 87%);
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Typography
+
+body{
+    font-size: 18px;
+    color: white;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..500&display=swap");
+    font-weight: 300, 400, 500;
+}
+
+
+.container{
+    background-color: $navy-950;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    grid-template-areas:
+        "sidebar card card card"
+        "sidebar card card card";
+}
+
+.card{
+    background-color: $navy-900;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+}
+
+.sidebar{
+    grid-row: span 2;
+    padding: 0;
+
+    .header{
+        background-color: $purple-600;
+        padding: 20px;
+        border-radius: inherit;
+
+    }
+
+    img {
+        width: 40%;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+   
+}
+
+// switch
+.switch-time{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.daily, .weekly, .monthly{
+    color: $navy-200;
+}
+
+.selected{
+    color: white;
+}
+
+// ....
