@@ -37,8 +37,8 @@ async function init() {
             // for each card update hours and previous hours
             const cards = { 0: 'work', 1: 'play', 2: 'study', 3: 'exercise', 4: 'social', 5: 'selfcare' }
             Object.entries(cards).forEach(([key, item]) => {// item = value        
-                const hrs = document.querySelector(`.${item} .time-data .hours`)
-                const prev = document.querySelector(`.${item} .time-data .previous`)
+                const hrs = document.querySelector(`.${item} .timeframes .hours`)
+                const prev = document.querySelector(`.${item} .timeframes .previous`)
                 const current = json[key].timeframes[selectedPeriod].current
                 const previous = json[key].timeframes[selectedPeriod].previous
                 hrs.innerText = `${current}hrs`

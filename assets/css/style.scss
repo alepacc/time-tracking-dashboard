@@ -155,15 +155,13 @@ h3 {
     padding: 20px;
     border-radius: inherit;
     background-color: $navy-900;
-    top: -20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    position: relative;
-    // bottom: 0;
-    // height: 85%;
-    // width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
     cursor: pointer;
 }
@@ -179,28 +177,45 @@ h3 {
 }
 
 // color background card
-.work .background{
+.card{
+    background-position: 90% -5%;
+    background-repeat: no-repeat;
+    background-size: 60px;
+
+}
+.work {
     background-color: $orange-300;
+    background-image: url("/images/icon-work.svg");
+ 
 }
 
-.play .background{
+.play {
     background-color: $blue-300;
+    background-image: url("/images/icon-play.svg");
 }
 
-.study .background{
+.study {
     background-color: $pink-400;
+    background-image: url("/images/icon-study.svg");
 }
 
-.exercise .background{
+.exercise {
     background-color: $green-400;
+    background-image: url("/images/icon-exercise.svg");
+    background-position: 90% 0;
+
 }
 
-.social .background{
+.social {
     background-color: $purple-700;
+    background-image: url("/images/icon-social.svg");
+
 }
 
-.selfcare .background{
+.selfcare {
     background-color: $yellow-300;
+    background-image: url("/images/icon-self-care.svg");
+
 }
 
 
@@ -237,16 +252,19 @@ h3 {
         justify-content: space-evenly;
     }
 
-      
-.time-data {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .card{
+        height: 150px;
+    }
+    
+    .timeframes {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-    
-h1{    
-    font-size: 2rem;
-}
-    
+        
+    h1{    
+        font-size: 2rem;
+    }
+        
 }
