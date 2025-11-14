@@ -1,7 +1,7 @@
 //——————————— json data ——————————————
 async function requestData() {
   try {
-    const response = await fetch("../data.json")
+    const response = await fetch("data.json")
     if (!response.ok) throw new Error("error on JSON")
 
     const data = await response.json()
