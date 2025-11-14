@@ -90,6 +90,9 @@ h3 {
   padding: 20px;
   align-items: flex-start;
 }
+.switch-time span:hover {
+  color: white;
+}
 
 .daily, .weekly, .monthly {
   color: hsl(235, 45%, 61%);
@@ -117,6 +120,9 @@ h3 {
 .heading img {
   cursor: pointer;
 }
+.heading img:hover {
+  filter: brightness(1.4);
+}
 
 .content {
   padding: 20px;
@@ -129,6 +135,9 @@ h3 {
   bottom: 0;
   width: 100%;
   cursor: pointer;
+}
+.content:hover {
+  filter: brightness(1.4);
 }
 
 .background {
