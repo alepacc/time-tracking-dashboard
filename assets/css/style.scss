@@ -24,15 +24,34 @@ $navy-200: hsl(236, 100%, 87%);
 
 // Typography
 
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300, 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXyw023e.woff2) format('woff2');
+//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body{
     font-size: 18px;
     color: white;
+    font-family: "Rubik";
 }
 
-@font-face {
-    font-family: "Rubik";
-    src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..500&display=swap");
-    font-weight: 300, 400, 500;
+/* testo */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+h3 {
+  color: $navy-200;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 
@@ -47,22 +66,26 @@ body{
     display: grid;
     justify-items: center;
     align-items: center;
+    width: 100%;
+    justify-content: center;
     padding: 20px;
     gap: 30px;
     grid-template-areas:
         "sidebar card card card"
         "sidebar card card card";
+    grid-template-columns: repeat(4, 200px);
 }
 
 .card{
     background-color: $navy-900;
     border-radius: 10px;
-    padding: 20px;
+    // padding: 20px;
     height: 100%;
-
+    width: 100%;
     display: flex;
     // align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .sidebar{
@@ -73,7 +96,11 @@ body{
         background-color: $purple-600;
         padding: 20px;
         border-radius: inherit;
-
+        height: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
     }
 
     img {
@@ -89,17 +116,137 @@ body{
 .switch-time{
     display: inline-flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     align-items: flex-start;
 }
 
 .daily, .weekly, .monthly{
-    color: $navy-200;
+    color: $purple-500;
+    cursor: pointer;
 }
 
 .selected{
-    color: white;
+    color: $navy-200;
 }
 
-// ....
+// card elements
+.card-img{
+    position: relative;
+    right: 5px;
+    top: -5px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.heading {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        cursor: pointer;
+    }
+}
+
+.content {
+    padding: 20px;
+    border-radius: inherit;
+    background-color: $navy-900;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    position: relative;
+    // bottom: 0;
+    // height: 85%;
+    // width: 100%;
+
+    cursor: pointer;
+}
+
+
+
+.background {
+    display: flex;
+    border-radius: inherit;
+    justify-content: flex-end;
+    overflow: clip;
+    width: 100%;
+}
+
+// color background card
+.work .background{
+    background-color: $orange-300;
+}
+
+.play .background{
+    background-color: $blue-300;
+}
+
+.study .background{
+    background-color: $pink-400;
+}
+
+.exercise .background{
+    background-color: $green-400;
+}
+
+.social .background{
+    background-color: $purple-700;
+}
+
+.selfcare .background{
+    background-color: $yellow-300;
+}
+
+
+
+
+@media (max-width:768px) {
+    .container{
+        height: 100%;
+    }
+
+    .grid{
+        grid-template-areas: none;
+        grid-template-columns: auto;
+    }
+
+    .sidebar{
+        .header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+
+            h1{font-size: 1.5rem;}
+
+        }
+        img {
+            width: auto;
+            height: 60px;
+        }
+    }
+
+    .switch-time {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+      
+.time-data {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    
+h1{    
+    font-size: 2rem;
+}
+    
+}

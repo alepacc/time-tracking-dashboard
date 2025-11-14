@@ -4,16 +4,36 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300, 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXyw023e.woff2) format("woff2");
+}
 body {
   font-size: 18px;
   color: white;
+  font-family: "Rubik";
 }
 
-@font-face {
-  font-family: "Rubik";
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..500&display=swap");
-  font-weight: 300, 400, 500;
+/* testo */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
 }
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h3 {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 .container {
   background-color: hsl(226, 43%, 10%);
   height: 100dvh;
@@ -25,18 +45,22 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
+  width: 100%;
+  justify-content: center;
   padding: 20px;
   gap: 30px;
   grid-template-areas: "sidebar card card card" "sidebar card card card";
+  grid-template-columns: repeat(4, 200px);
 }
 
 .card {
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
-  padding: 20px;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .sidebar {
@@ -47,6 +71,11 @@ body {
   background-color: hsl(246, 80%, 60%);
   padding: 20px;
   border-radius: inherit;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
 }
 .sidebar img {
   width: 40%;
@@ -57,15 +86,113 @@ body {
 .switch-time {
   display: inline-flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 20px;
   align-items: flex-start;
 }
 
 .daily, .weekly, .monthly {
-  color: hsl(236, 100%, 87%);
+  color: hsl(235, 45%, 61%);
+  cursor: pointer;
 }
 
 .selected {
-  color: white;
+  color: hsl(236, 100%, 87%);
+}
+
+.card-img {
+  position: relative;
+  right: 5px;
+  top: -5px;
+  width: 50px;
+  height: 50px;
+}
+
+.heading {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+}
+.heading img {
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+  border-radius: inherit;
+  background-color: hsl(235, 46%, 20%);
+  top: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.background {
+  display: flex;
+  border-radius: inherit;
+  justify-content: flex-end;
+  overflow: clip;
+  width: 100%;
+}
+
+.work .background {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play .background {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study .background {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise .background {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social .background {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare .background {
+  background-color: hsl(43, 84%, 65%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
+  .grid {
+    grid-template-areas: none;
+    grid-template-columns: auto;
+  }
+  .sidebar .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .sidebar .header h1 {
+    font-size: 1.5rem;
+  }
+  .sidebar img {
+    width: auto;
+    height: 60px;
+  }
+  .switch-time {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .time-data {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
