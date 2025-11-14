@@ -11,9 +11,10 @@ $yellow-300: hsl(43, 84%, 65%); // self care
 // Neutral
 $navy-950: hsl(226, 43%, 10%);
 $navy-900: hsl(235, 46%, 20%);
+$navy-800: hsl(235, 41%, 34%);
 $purple-500: hsl(235, 45%, 61%);
 $navy-200: hsl(236, 100%, 87%);
-
+$white: hsl(0, 0%, 100%);
 
 
 *{
@@ -35,7 +36,7 @@ $navy-200: hsl(236, 100%, 87%);
 
 body{
     font-size: 18px;
-    color: white;
+    color: $white;
     font-family: "Rubik";
 }
 
@@ -105,7 +106,7 @@ h3 {
 
     img {
         width: 40%;
-        border: 2px solid white;
+        border: 2px solid $white;
         border-radius: 50%;
     }
 
@@ -120,7 +121,7 @@ h3 {
     padding: 20px;
     align-items: flex-start;
     span:hover {
-        color: white;
+        color: $white;
     }
 }
 
@@ -172,7 +173,7 @@ h3 {
 
     cursor: pointer;
     &:hover {
-        filter: brightness(1.4);
+        background-color: $navy-800;
     }
 }
 
